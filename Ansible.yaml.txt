@@ -1,0 +1,16 @@
+- name: Ansible test
+  hosts: localhost
+  tasks:
+  - name: launching AWS instance using Ansible
+    ec2:
+      key_name: putty
+      instance_type: t2.micro
+      image: ami-0747bdcabd34c712a
+      region: us-east-1
+      wait: yes
+      group: aws.cg
+      count: 3
+      vpc_subnet_id: subnet-039a2d161b73d2fd4 
+      assign_public_ip: yes
+      aws_access_key: AKIA3PYXSXRBEY2TB7Q5
+      aws_secret_key: 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
